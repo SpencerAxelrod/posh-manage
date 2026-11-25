@@ -1,4 +1,16 @@
+<#
+.SYNOPSIS
+Installs PoshManage for the current user in PowerShell 7 on Windows.
+
+.DESCRIPTION
+The script installs the versioned module files in the module directory for the current user.
+It makes sure that the directory is listed in `PSModulePath`.
+Use `-WhatIf` to preview the installation.
+Use `-Force` to replace different files for the same version.
+If copying fails or the module manifest is invalid, the script restores files that existed before the installation.
+#>
 #requires -Version 7.0
+
 [CmdletBinding(SupportsShouldProcess)]
 param([switch]$Force)
 

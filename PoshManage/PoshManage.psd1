@@ -1,3 +1,12 @@
+<#
+.SYNOPSIS
+Defines the PoshManage module manifest.
+
+.DESCRIPTION
+The manifest declares the module version, main module file, and PowerShell requirements.
+It exports `Invoke-PoshThemes` and the `poshthemes` alias.
+The module requires PowerShell 7 or later on Windows.
+#>
 @{
     RootModule = 'PoshManage.psm1'
     ModuleVersion = '0.1.0'

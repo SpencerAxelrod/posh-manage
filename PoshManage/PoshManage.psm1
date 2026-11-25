@@ -1,3 +1,22 @@
+<#
+.SYNOPSIS
+Lists and switches local Oh My Posh themes in PowerShell 7 on Windows.
+
+.DESCRIPTION
+Themes are JSON prompt designs stored in `$HOME\.poshthemes`.
+The module reads the profile for the current user and PowerShell host.
+This profile is the startup script for that host.
+It parses the profile before it adds or changes an Oh My Posh startup command.
+It preserves the profile encoding and line endings. It backs up an existing profile before each change.
+It stops when the current profile is signed or its Oh My Posh startup command is complex.
+It also stops when another standard profile runs an Oh My Posh startup command.
+It prepares the requested theme before it updates the prompt in the current session.
+Importing the module does not change the prompt.
+
+.NOTES
+Exports `Invoke-PoshThemes` and the `poshthemes` alias.
+Theme switching requires Oh My Posh on `PATH`.
+#>
 #requires -Version 7.0
 
 if (-not $IsWindows) {

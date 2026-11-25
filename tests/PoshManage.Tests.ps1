@@ -1,3 +1,15 @@
+<#
+.SYNOPSIS
+Tests the PoshManage module and installer.
+
+.DESCRIPTION
+The tests cover command aliases, theme listing and switching, startup-script edits, backups, and installation.
+They use temporary profiles (startup scripts) and module paths.
+The integration test (a test of parts used together) runs the real Oh My Posh program.
+It tests prompt updates in the current session and a fresh session.
+It also tests that invalid themes leave the saved profile unchanged.
+Run the suite with Pester 5 or later in PowerShell 7 on Windows.
+#>
 #requires -Version 7.0
 #requires -Modules @{ ModuleName = 'Pester'; ModuleVersion = '5.0' }
 
